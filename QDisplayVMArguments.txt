@@ -1,0 +1,2 @@
+-Dqueue.dir=C:\queue
+-Dscript.sql=script.sql

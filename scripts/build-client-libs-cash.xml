@@ -1,0 +1,50 @@
+<project name="queue-display" default="queuedisplay-all-libs" basedir="..">
+
+<target name="queuedisplay-all-libs">
+	<signjar jar="./lib/cash.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/cash.jar"/>
+	
+	<signjar jar="./lib/formsrt.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/formsrt.jar"/>
+	
+	<signjar jar="./lib/jmf.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/jmf.jar"/>
+	
+	<signjar jar="./lib/mysql-connector-java-3.0.17-ga-bin.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/mysql-connector-java-3.0.17-ga-bin.jar"/>		
+	
+	<signjar jar="./lib/axis.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/axis.jar"/>
+		
+	<signjar jar="./lib/jaxrpc.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/jaxrpc.jar"/>
+	
+	<signjar jar="./lib/mail.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/mail.jar"/>
+
+	<signjar jar="./lib/commons-logging-1.0.4.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/commons-logging-1.0.4.jar"/>
+	
+	<signjar jar="./lib/activation.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/activation.jar"/>
+	
+	<signjar jar="./lib/commons-discovery.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/commons-discovery.jar"/>
+	
+	<signjar jar="./lib/wsdl4j.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/wsdl4j.jar"/>
+		
+</target>	
+
+</project>

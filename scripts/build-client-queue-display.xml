@@ -1,0 +1,20 @@
+<project name="queue-display" default="queue-display" basedir="../bin">
+	<target name="queue-display">
+		<patternset id="queue-display-patternset">
+			<include name="com/**/*.*" />
+			<exclude name="com/permata/queue/ws/remote/*.*" />
+			<exclude name="com/permata/testing/queue/*.*" />
+			<exclude name="com/permata/queue/res/Qdisplay_no_*.jpg" />
+			<exclude name="com/permata/queue/res/Qdisplay_sry_*.jpg" />
+		</patternset>
+		<jar destfile="../build/queue-display-tmp.jar">
+			<fileset dir="." casesensitive="yes">
+				<patternset refid="queue-display-patternset" />
+			</fileset>
+		</jar>
+		<signjar jar="../build/queue-display-tmp.jar" alias="permata"
+			keystore="../scripts/.keystore" storepass="password" verbose="false"
+			signedjar="../build/queue-display.jar" />
+			
+	</target>
+</project>

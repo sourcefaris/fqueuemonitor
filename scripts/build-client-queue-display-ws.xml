@@ -1,0 +1,16 @@
+<project name="display-ws" default="display-ws" basedir="../bin">
+	<target name="display-ws">
+		<patternset id="display-ws-patternset">
+			<include name="com/permata/queue/ws/remote/*.*" />
+			<include name="org/apache/xml/xml_soap/*.*" />
+		</patternset>
+		<jar destfile="../build/display-ws-tmp.jar">
+			<fileset dir="." casesensitive="yes">
+				<patternset refid="display-ws-patternset" />
+			</fileset>
+		</jar>
+		<signjar jar="../build/display-ws-tmp.jar" alias="permata"
+			keystore="../scripts/.keystore" storepass="password" verbose="false"
+			signedjar="../build/display-ws.jar" />
+	</target>
+</project>

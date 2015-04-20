@@ -1,0 +1,16 @@
+<project name="queue-display-res" default="queue-display-res" basedir="../bin">
+	<target name="queue-display-res">
+		<patternset id="queue-display-res-patternset">
+			<include name="com/permata/queue/res/Qdisplay_sry_*.jpg" />
+		</patternset>
+		<jar destfile="../build/queue-display-res-tmp.jar">
+			<fileset dir="." casesensitive="yes">
+				<patternset refid="queue-display-res-patternset" />
+			</fileset>
+		</jar>
+		<signjar jar="../build/queue-display-res-tmp.jar" alias="permata"
+			keystore="../scripts/.keystore" storepass="password" verbose="false"
+			signedjar="../build/queue-display-sry-res.jar" />
+			
+	</target>
+</project>
